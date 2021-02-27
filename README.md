@@ -1,6 +1,28 @@
 ## NestJS REST API for Active Citizen
 Active Citizen is a project to enhance people's engagement with their communities. 
 
+### Endpoints
+
+#### 1. Auth
+- POST: Register (send email activation code)
+  ```/auth/signup```
+- PATCH: User Activation (activate a new user using the activation code which was sent via email)
+  ```/auth/signup/activate```
+- POST: Login (get JWT)
+  ```/auth/login```
+- POST: Reset password (send email with reset instructions)
+  ```/auth/reset-password```
+- POST: Reset password confirm
+  ```/auth/reset-password/confirm```  
+  
+#### 2. Users
+- GET: Get User’s profile 
+  ```/user/profile```
+- PATCH: Change User’s password
+  ```/user/change-paswword```
+- POST: Logout (add JWT to invalid tokens)
+  ```/user/logout```
+
 ### Powered by
 #### 1. NestJS
 <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
